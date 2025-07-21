@@ -4,6 +4,11 @@
   <title>视频评分系统</title>
   <style>
     body { font-family: Arial; max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .video-row { 
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
     .video-container {
       flex: 1 1 44%; /* 基础宽度45%，可伸缩 */
       min-width: 300px; /* 最小宽度 */
@@ -37,6 +42,7 @@
 
 <form id="rating-form" action="https://docs.google.com/forms/d/e/1FAIpQLSdeecVXBJoyhCsZJACTCwjrq8dUUmHUJ-c6fjc4O1Be3IvVWQ/formResponse" method="POST">
 
+<div class="video-row">
     <!-- 视频1 -->
   <div class="video-container">
     <h2>视频1</h2>
@@ -52,6 +58,21 @@
       </div>
     </div>
   </div>
+   <div class="video-container">
+      <h2>视频1.1</h2>
+      <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/groundtruth/马保国.mp4"></video>
+      <div class="rating">
+        <label>评分：</label>
+        <div class="rating-options">
+          <label class="rating-option"><input type="radio" name="entry.1440489451" value="1" required> 1</label>
+          <label class="rating-option"><input type="radio" name="entry.1440489451" value="2"> 2</label>
+          <label class="rating-option"><input type="radio" name="entry.1440489451" value="3"> 3</label>
+          <label class="rating-option"><input type="radio" name="entry.1440489451" value="4"> 4</label>
+          <label class="rating-option"><input type="radio" name="entry.1440489451" value="5"> 5</label>
+        </div>
+      </div>
+  </div>
+</div>
   
   <!-- 视频2 -->
   <div class="video-container">
