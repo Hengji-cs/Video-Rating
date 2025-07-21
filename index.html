@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>视频评分系统</title>
+  <style>
+    body { font-family: Arial; max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .video-container {
+      flex: 1 1 45%; /* 基础宽度45%，可伸缩 */
+      min-width: 300px; /* 最小宽度 */
+      overflow: hidden; /* 防止内容溢出 */
+    }
+    video {
+      width: 100%;
+      max-height: 300px;
+      background: #000;
+      display: block; /* 消除inline间隙 */
+    }
+    .rating { display: flex; align-items: center; margin: 10px 0; }
+    .rating label { margin-right: 10px; }
+    .rating-options { display: flex; gap: 10px; }
+    .rating-option { 
+      display: flex; align-items: center;
+      cursor: pointer;
+    }
+    #submit-all { 
+      background: #4285f4; color: white; 
+      padding: 10px 20px; border: none; border-radius: 4px;
+      font-size: 16px; cursor: pointer; 
+    }
+    input[type="radio"] { margin-right: 5px; }
+  </style>
+</head>
+<body>
+
+<h1>视频评分系统</h1>
+<p>请为以下视频打分（1-5分），最后统一提交</p>
+
+<form id="rating-form" action="https://docs.google.com/forms/d/e/1FAIpQLSdeecVXBJoyhCsZJACTCwjrq8dUUmHUJ-c6fjc4O1Be3IvVWQ/formResponse" method="POST">
+
+    <!-- 视频1 -->
+  <div class="video-container">
+    <h2>视频1</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/ai/【P6】【AI全自动-鬼畜生成】浑元形意实验室主任马老师.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.1440489450" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.1440489450" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.1440489450" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.1440489450" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.1440489450" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 视频2 -->
+  <div class="video-container">
+    <h2>视频2</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/ai/【P6】【AI全自动-卡点混剪】蜘蛛侠：纵横宇宙.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.1872486097" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.1872486097" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.1872486097" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.1872486097" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.1872486097" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+    <!-- 视频3 -->
+  <div class="video-container">
+    <h2>视频3</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/ai/【P5】【AI全自动-鬼畜生成】刘皇叔得了MVP！.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.1143649600" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.1143649600" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.1143649600" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.1143649600" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.1143649600" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+      <!-- 视频4 -->
+  <div class="video-container">
+    <h2>视频4</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/ai/【P5】【AI全自动-卡点混剪】哪吒1混剪.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.975036297" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.975036297" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.975036297" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.975036297" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.975036297" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+        <!-- 视频5 -->
+  <div class="video-container">
+    <h2>视频5</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/ai/【P4】【AI全自动-鬼畜生成】雪王：回答我！.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.403929622" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.403929622" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.403929622" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.403929622" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.403929622" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- 视频6 -->
+  <div class="video-container">
+    <h2>视频6</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/ai/【P4】【AI全自动-卡点混剪】星际穿越：爱可以跨越时空.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.1965548989" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.1965548989" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.1965548989" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.1965548989" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.1965548989" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- 视频7 -->
+  <div class="video-container">
+    <h2>视频7</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/ai/【P3】【AI全自动-鬼畜生成】北伐失败找自己问题.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.240613791" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.240613791" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.240613791" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.240613791" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.240613791" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+    <!-- 视频8 -->
+  <div class="video-container">
+    <h2>视频8</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/ai/【P3】【AI全自动-卡点混剪】星际穿越：人类勇气的赞歌.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.86305489" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.86305489" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.86305489" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.86305489" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.86305489" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+      <!-- 视频9 -->
+  <div class="video-container">
+    <h2>视频9</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/ai/【P2】一键成片！AI带你4分钟速读《庆余年》.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.156767037" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.156767037" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.156767037" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.156767037" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.156767037" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+        <!-- 视频10 -->
+  <div class="video-container">
+    <h2>视频10</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/ai/【P2】【AI全自动-卡点混剪】泰坦尼克号混剪.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.1382411752" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.1382411752" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.1382411752" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.1382411752" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.1382411752" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+          <!-- 视频11 -->
+  <div class="video-container">
+    <h2>视频11</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/ai/【P2】AI自动鬼畜！范将军怒评甲亢哥成都行.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.369901999" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.369901999" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.369901999" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.369901999" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.369901999" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+            <!-- 视频12 -->
+  <div class="video-container">
+    <h2>视频12</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/ai/【P1】他本是一世无双太子位沉檀凝香.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.1064097623" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.1064097623" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.1064097623" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.1064097623" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.1064097623" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- 视频13 -->
+  <div class="video-container">
+    <h2>视频13</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/ai/【P1】一键成片！AI带你速读《庆余年》56-63章.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.1264319353" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.1264319353" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.1264319353" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.1264319353" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.1264319353" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+    <!-- 视频14 -->
+  <div class="video-container">
+    <h2>视频14</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/ai/【P1】【AI全自动-访谈剪辑】电影沙丘2剧组播客访谈摘要.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.1518176188" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.1518176188" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.1518176188" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.1518176188" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.1518176188" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+      <!-- 视频15 -->
+  <div class="video-container">
+    <h2>视频15</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/ai/【P1】【AI全自动-访谈剪辑】ChatGPT4o生图模式直播访谈摘要.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.910085471" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.910085471" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.910085471" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.910085471" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.910085471" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+        <!-- 视频16 -->
+  <div class="video-container">
+    <h2>视频16</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/ai/【P1】【AI全自动-脱口秀生成】中文相声-英文脱口秀.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.2090482310" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.2090482310" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.2090482310" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.2090482310" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.2090482310" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+          <!-- 视频17 -->
+  <div class="video-container">
+    <h2>视频17</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/ai/【P1】【AI全自动-相声生成】英文脱口秀-中文相声.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.1115162251" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.1115162251" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.1115162251" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.1115162251" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.1115162251" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+          <!-- 视频18 -->
+  <div class="video-container">
+    <h2>视频18</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/ai/【P1】【AI全自动-歌曲二创】论文被拒派大星唱给你听.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.213256266" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.213256266" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.213256266" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.213256266" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.213256266" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- 视频19 -->
+  <div class="video-container">
+    <h2>视频19</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/ai/【P1】⚡等我当上美国大统领⚡.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.1606565001" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.1606565001" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.1606565001" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.1606565001" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.1606565001" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+    <!-- 视频20 -->
+  <div class="video-container">
+    <h2>视频20</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/Director/titanic.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.2024969381" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.2024969381" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.2024969381" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.2024969381" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.2024969381" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+      <!-- 视频21 -->
+  <div class="video-container">
+    <h2>视频21</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/Director/spiderman.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.826015836" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.826015836" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.826015836" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.826015836" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.826015836" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+      <!-- 视频22 -->
+  <div class="video-container">
+    <h2>视频22</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/Director/openai.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.1305179709" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.1305179709" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.1305179709" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.1305179709" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.1305179709" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+        <!-- 视频23 -->
+  <div class="video-container">
+    <h2>视频23</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/Director/nezha_2.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.1461528577" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.1461528577" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.1461528577" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.1461528577" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.1461528577" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+          <!-- 视频24 -->
+  <div class="video-container">
+    <h2>视频24</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/Director/nezha_1.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.1058037886" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.1058037886" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.1058037886" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.1058037886" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.1058037886" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+            <!-- 视频25 -->
+  <div class="video-container">
+    <h2>视频25</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/Director/dune.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.194109543" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.194109543" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.194109543" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.194109543" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.194109543" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+              <!-- 视频26 -->
+  <div class="video-container">
+    <h2>视频26</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/Director/Instellar_2.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.257212901" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.257212901" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.257212901" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.257212901" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.257212901" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+                <!-- 视频27 -->
+  <div class="video-container">
+    <h2>视频27</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/Director/Instellar_1.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.49554799" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.49554799" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.49554799" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.49554799" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.49554799" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+
+ <!-- 视频28 -->
+  <div class="video-container">
+    <h2>视频28</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/Funclip/titanic_1.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.1888543769" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.1888543769" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.1888543769" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.1888543769" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.1888543769" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+   <!-- 视频29 -->
+  <div class="video-container">
+    <h2>视频29</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/Funclip/openai_1.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.95977902" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.95977902" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.95977902" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.95977902" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.95977902" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+     <!-- 视频30 -->
+  <div class="video-container">
+    <h2>视频30</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/Funclip/nezha_2.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.959760262" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.959760262" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.959760262" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.959760262" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.959760262" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+       <!-- 视频31 -->
+  <div class="video-container">
+    <h2>视频31</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/Funclip/nezha_1.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.897443459" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.897443459" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.897443459" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.897443459" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.897443459" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+         <!-- 视频32 -->
+  <div class="video-container">
+    <h2>视频32</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/Funclip/dunepodcast_1.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.256988741" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.256988741" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.256988741" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.256988741" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.256988741" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+           <!-- 视频33 -->
+  <div class="video-container">
+    <h2>视频33</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/Funclip/Spiderman_1.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.888606863" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.888606863" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.888606863" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.888606863" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.888606863" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+   <!-- 视频34 -->
+  <div class="video-container">
+    <h2>视频34</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/Funclip/Interstellar_2.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.1923909896" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.1923909896" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.1923909896" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.1923909896" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.1923909896" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+    <!-- 视频35 -->
+  <div class="video-container">
+    <h2>视频35</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/Funclip/Interstellar_1.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.1752919148" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.1752919148" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.1752919148" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.1752919148" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.1752919148" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+      <!-- 视频36 -->
+  <div class="video-container">
+    <h2>视频36</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/NotebookLM/dune_summarization.wav"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.1623424797" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.1623424797" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.1623424797" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.1623424797" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.1623424797" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+        <!-- 视频37 -->
+  <div class="video-container">
+    <h2>视频37</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/NotebookLM/notebooklm_openai.wav"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.281345995" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.281345995" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.281345995" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.281345995" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.281345995" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+
+          <!-- 视频38 -->
+  <div class="video-container">
+    <h2>视频38</h2>
+    <video controls src="https://video-rating-1308430912.cos.ap-guangzhou.myqcloud.com/NarratoAI/qyn.mp4"></video>
+    <div class="rating">
+      <label>评分：</label>
+      <div class="rating-options">
+        <label class="rating-option"><input type="radio" name="entry.1912395768" value="1" required> 1</label>
+        <label class="rating-option"><input type="radio" name="entry.1912395768" value="2"> 2</label>
+        <label class="rating-option"><input type="radio" name="entry.1912395768" value="3"> 3</label>
+        <label class="rating-option"><input type="radio" name="entry.1912395768" value="4"> 4</label>
+        <label class="rating-option"><input type="radio" name="entry.1912395768" value="5"> 5</label>
+      </div>
+    </div>
+  </div>
+  
+  <button type="submit" id="submit-all">提交所有评分</button>
+</form>
+
+<script>
+  document.getElementById('rating-form').addEventListener('submit', function(e) {
+    alert('感谢您的评分！');
+  });
+</script>
+
+</body>
+</html>
